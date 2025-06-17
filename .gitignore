@@ -1,0 +1,68 @@
+# === Python artifacts ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+*.pkl
+*.pt
+
+# === Jupyter artifacts ===
+.ipynb_checkpoints/
+
+# === Build/Install artifacts ===
+build/
+dist/
+*.egg-info/
+slowfast.egg-info/
+
+# === Virtual environments ===
+venv/
+.env/
+.envrc
+*.env
+
+# === Output folders ===
+out/
+out_0.02_fall/
+out_long_videos/
+out_long_videos_summary/
+
+# === Ignore model checkpoints ===
+slowfast/checkpoints/*.pyth
+slowfast/checkpoints_ava/*.pyth
+
+# === Ignore prediction CSVs and similar outputs ===
+slowfast/*.csv
+slowfast/*.csv.gz
+
+# === Ignore model weights ===
+slowfast/*.pkl
+
+# === Ignore video files ===
+*.mp4
+*.webm
+*.mkv
+
+# === Ignore compressed archives ===
+*.zip
+*.tar
+
+# === Ignore dataset and annotation folders ===
+data/ava/
+data/daycare_fall/
+
+# Pyenv local version file
+.python-version
+slowfast/=0.5.12
+
+# === Logs & temporary files ===
+log_memory.txt
+stdout.log
+python_crash.log
+json_stats.log
+detections_latest.csv
+groundtruth_latest.csv
+
+# === External or nested Git repositories ===
+detectron2_repo/.git/
+detectron2_repo/
