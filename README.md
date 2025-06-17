@@ -29,7 +29,7 @@ If you're using `pyenv`, `virtualenv`, or system Python >=3.9:
 
 ```bash
 # Clone this repo and cd into it
-git clone <your-repo-url>
+git clone https://github.com/sarkarsachin57/SlowFast_Pipelines.git
 cd SlowFast_Pipelines
 
 # Install Python dependencies
