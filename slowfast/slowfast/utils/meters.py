@@ -236,7 +236,7 @@ class AVAMeter:
         else:
             groundtruth = self.mini_groundtruth
 
-        self.full_map = evaluate_ava(
+        self.full_map, self.full_result = evaluate_ava(
             all_preds,
             all_ori_boxes,
             all_metadata.tolist(),
@@ -255,6 +255,8 @@ class AVAMeter:
         self.min_top1_err = self.full_map
         self.stats["top1_acc"] = map_str
         self.stats["top5_acc"] = map_str
+
+        return self.full_result
 
     def log_epoch_stats(self, cur_epoch):
         """

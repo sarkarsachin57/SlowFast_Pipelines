@@ -148,8 +148,8 @@ def perform_test(test_loader, model, test_meter, cfg, writer=None):
 
             logger.info("Successfully saved prediction results to {}".format(save_path))
 
-    test_meter.finalize_metrics()
-    return test_meter
+    full_results = test_meter.finalize_metrics()
+    return test_meter, full_results
 
 
 def test(cfg):
@@ -236,7 +236,7 @@ def test(cfg):
             writer = None
 
         # # Perform multi-view test on the entire dataset.
-        test_meter = perform_test(test_loader, model, test_meter, cfg, writer)
+        test_meter, full_results = perform_test(test_loader, model, test_meter, cfg, writer)
         test_meters.append(test_meter)
         if writer is not None:
             writer.close()
@@ -265,4 +265,4 @@ def test(cfg):
 
         logger.info("{}".format(result_string))
     logger.info("{}".format(result_string_views))
-    return result_string + " \n " + result_string_views
+    return full_results, result_string + " \n " + result_string_views

@@ -163,7 +163,7 @@ def evaluate_ava(
     results = run_evaluation(categories, groundtruth, detections, excluded_keys)
 
     logger.info("AVA eval done in %f seconds." % (time.time() - eval_start))
-    return results["PascalBoxes_Precision/mAP@0.5IOU"]
+    return results["PascalBoxes_Precision/mAP@0.5IOU"], results
 
 
 def run_evaluation(categories, groundtruth, detections, excluded_keys, verbose=True):

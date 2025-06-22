@@ -26,6 +26,8 @@ out/
 out_0.02_fall/
 out_long_videos/
 out_long_videos_summary/
+slowfast/outputs/
+slowfast/outputs_only_daycare/
 
 # === Ignore model checkpoints ===
 slowfast/checkpoints/*.pyth
@@ -50,6 +52,7 @@ slowfast/*.pkl
 # === Ignore dataset and annotation folders ===
 data/ava/
 data/daycare_fall/
+data/combined/
 
 # Pyenv local version file
 .python-version
@@ -62,6 +65,7 @@ python_crash.log
 json_stats.log
 detections_latest.csv
 groundtruth_latest.csv
+slowfast/core
 
 # === External or nested Git repositories ===
 detectron2_repo/.git/
